@@ -1,9 +1,15 @@
 package br.vinicius;
 
+import br.vinicius.refl.ObjectToJson;
+
 public class Main {
     public static void main(String[] args) {
 
-        System.out.printf("Hello and welcome!");
+        Pessoa pessoa = new Pessoa(1, "João", "12345");
+        ObjectToJson objectToJson = new ObjectToJson();
+
+
+        System.out.println(objectToJson.transform(pessoa));
 
     }
 }
